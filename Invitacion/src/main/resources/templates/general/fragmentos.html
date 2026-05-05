@@ -1,0 +1,55 @@
+<!--Fragmento#1 Head-->
+<head th:fragment="head">
+    <title>Isra y Pau</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="256x256" href="/fav/favicon-256x256.png"/>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script th:src="@{/js/rutinas.js}"></script>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<!--Fragmento#2 Header -->
+<header th:fragment="header" class="header">
+    <nav class="navbar">
+        <div class="navbar-pill">
+
+            <!-- Mobile toggler -->
+            <button class="navbar-toggler" id="navToggler" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <ul class="navbar-nav" id="navMenu">
+                <li class="nav-item"><a class="nav-link active" href="#">[[#{plantilla.boda}]]</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.nosotros}]]</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.vestimenta}]]</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.regalo}]]</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.rsvp}]]</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<!--Fragmento#3 Footer -->
+<footer th:fragment="footer" class="footer">
+    <ul class="footer-nav">
+        <li><a href="#">[[#{plantilla.boda}]]</a></li>
+        <li><a href="#">[[#{plantilla.nosotros}]]</a></li>
+        <li><a href="#">[[#{plantilla.vestimenta}]]</a></li>
+        <li><a href="#">[[#{plantilla.regalo}]]</a></li>
+        <li><a href="#">[[#{plantilla.rsvp}]]</a></li>
+    </ul>
+</footer>
+
+<!--Fragmento#4 Primera Sección -->
+<section th:fragment="animacion" class="animation-section">
+    <div id="lottie-container" class="lottie-wrapper" title="Click to play"></div>
+</section>
