@@ -1,5 +1,6 @@
 {
   "buildCommand": "cd invitacion-react && npm install && npm run build",
   "outputDirectory": "invitacion-react/dist",
-  "installCommand": "echo 'skip'"
+  "installCommand": "echo 'skip'",
+  "framework": null
 }
