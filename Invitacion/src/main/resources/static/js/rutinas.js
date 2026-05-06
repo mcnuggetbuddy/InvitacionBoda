@@ -17,12 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('click', function () {
             langMenu.classList.remove('open');
         });
+        langMenu.querySelectorAll('.lang-option').forEach(function (link) {
+            link.addEventListener('click', function () {
+                sessionStorage.setItem('scrollRestore', window.scrollY);
+            });
+        });
     }
 
     const carouselEl = document.getElementById('nosotrosCarousel');
     if (carouselEl && typeof bootstrap !== 'undefined') {
         new bootstrap.Carousel(carouselEl, { interval: 3000, ride: true });
     }
+
+    const savedScroll = sessionStorage.getItem('scrollRestore');
+    if (savedScroll !== null) sessionStorage.removeItem('scrollRestore');
 
     const container = document.getElementById('lottie-container');
     const preloader = document.getElementById('preloader');
@@ -63,12 +71,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 anim.addEventListener('DOMLoaded', function () {
                     if (preloader) preloader.classList.add('hidden');
-                    container.classList.add('played');
-                    anim.play();
                     const header = document.querySelector('.header');
                     if (header) header.classList.add('visible');
                     const pageContent = document.getElementById('page-content');
                     if (pageContent) pageContent.classList.add('visible');
+
+                    const scrollTarget = savedScroll !== null ? parseInt(savedScroll, 10) : 0;
+                    if (savedScroll !== null && scrollTarget > window.innerHeight) {
+                        window.scrollTo(0, scrollTarget);
+                    } else {
+                        container.classList.add('played');
+                        anim.play();
+                    }
                 });
 
                 anim.addEventListener('complete', function () {

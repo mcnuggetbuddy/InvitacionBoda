@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png"/>
@@ -115,12 +115,21 @@
         </div>
     </div>
     <div id="nosotrosCarousel" class="carousel slide nosotros-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="3"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
+                <img th:src="@{/img/images/Israel&amp;Paula-76.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
+            </div>
+            <div class="carousel-item">
                 <img th:src="@{/img/images/Israel&amp;Paula-46.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
             </div>
             <div class="carousel-item">
-                <img th:src="@{/img/images/Israel&amp;Paula-76.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
+                <img th:src="@{/img/images/Israel&amp;Paula-52.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
             </div>
             <div class="carousel-item">
                 <img th:src="@{/img/images/Israel&amp;Paula-106.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
@@ -132,11 +141,6 @@
         <button class="carousel-control-next" type="button" data-bs-target="#nosotrosCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="2"></button>
-        </div>
     </div>
 </section>
 
