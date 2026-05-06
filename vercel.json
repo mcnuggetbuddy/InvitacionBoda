@@ -1,3 +1,4 @@
 {
-  "rootDirectory": "invitacion-react"
+  "buildCommand": "cd invitacion-react && npm install && npm run build",
+  "outputDirectory": "invitacion-react/dist"
 }
