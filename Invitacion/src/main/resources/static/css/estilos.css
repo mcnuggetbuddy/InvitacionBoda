@@ -177,7 +177,7 @@ html {
 /* ── Toggler: hidden on desktop ── */
 .navbar-toggler {
     display: none;
-    border: 1.5px solid #f5dbf0;
+    border: none;
     border-radius: 50px;
     padding: 4px 12px;
     background: transparent;
@@ -201,6 +201,10 @@ html {
         left: 0;
         width: 100%;
         z-index: 100;
+    }
+
+    .header-inner {
+        align-items: flex-start;
     }
 
     .header-inner .navbar {
