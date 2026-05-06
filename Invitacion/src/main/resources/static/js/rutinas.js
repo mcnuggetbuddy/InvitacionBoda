@@ -25,41 +25,56 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const container = document.getElementById('lottie-container');
+    const preloader = document.getElementById('preloader');
+
     if (container && typeof lottie !== 'undefined') {
-        const anim = lottie.loadAnimation({
-            container: container,
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: '/img/animation.json'
-        });
+        fetch('/img/animation.json')
+            .then(function (res) { return res.json(); })
+            .then(function (animationData) {
+                const imageAssets = (animationData.assets || []).filter(function (a) {
+                    return a.p && typeof a.u === 'string';
+                });
 
-        let lottieReady = false;
-        let pageLoaded = false;
+                imageAssets.forEach(function (asset) {
+                    asset.u = '/img/' + asset.u;
+                });
 
-        function startAnimation() {
-            if (!lottieReady || !pageLoaded) return;
-            container.classList.add('played');
-            anim.play();
-            const header = document.querySelector('.header');
-            if (header) header.classList.add('visible');
-            const pageContent = document.getElementById('page-content');
-            if (pageContent) pageContent.classList.add('visible');
-        }
+                const preloadImages = imageAssets.map(function (asset) {
+                    return new Promise(function (resolve) {
+                        const img = new Image();
+                        img.onload = resolve;
+                        img.onerror = resolve;
+                        img.src = asset.u + asset.p;
+                    });
+                });
 
-        anim.addEventListener('DOMLoaded', function () {
-            lottieReady = true;
-            startAnimation();
-        });
+                return Promise.all(preloadImages).then(function () {
+                    return animationData;
+                });
+            })
+            .then(function (animationData) {
+                const anim = lottie.loadAnimation({
+                    container: container,
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: false,
+                    animationData: animationData
+                });
 
-        window.addEventListener('load', function () {
-            pageLoaded = true;
-            startAnimation();
-        });
+                anim.addEventListener('DOMLoaded', function () {
+                    if (preloader) preloader.classList.add('hidden');
+                    container.classList.add('played');
+                    anim.play();
+                    const header = document.querySelector('.header');
+                    if (header) header.classList.add('visible');
+                    const pageContent = document.getElementById('page-content');
+                    if (pageContent) pageContent.classList.add('visible');
+                });
 
-        anim.addEventListener('complete', function () {
-            const arrow = document.getElementById('scroll-arrow');
-            if (arrow) arrow.classList.add('visible');
-        });
+                anim.addEventListener('complete', function () {
+                    const arrow = document.getElementById('scroll-arrow');
+                    if (arrow) arrow.classList.add('visible');
+                });
+            });
     }
 });
