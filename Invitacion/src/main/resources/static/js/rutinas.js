@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const preloader = document.getElementById('preloader');
 
     if (container && typeof lottie !== 'undefined') {
-        fetch('https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/animation.json')
+        fetch('https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/animation.json', { mode: 'cors' })
             .then(function (res) { return res.json(); })
             .then(function (animationData) {
                 const imageAssets = (animationData.assets || []).filter(function (a) {
