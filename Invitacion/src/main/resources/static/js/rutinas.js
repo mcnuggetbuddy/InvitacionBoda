@@ -44,8 +44,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 imageAssets.forEach(function (asset) {
-                    asset.u = '/img/' + asset.u;
+                    asset.u = 'https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/';
                 });
+
+                const r2 = 'https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/';
+                const bgImages = [
+                    r2 + 'background.jpeg',
+                    r2 + 'foto-versiculo.jpg',
+                    r2 + 'foto-vestimenta.jpg',
+                    r2 + 'foto_rsvp.jpg'
+                ];
 
                 const preloadImages = imageAssets.map(function (asset) {
                     return new Promise(function (resolve) {
@@ -54,7 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         img.onerror = resolve;
                         img.src = asset.u + asset.p;
                     });
-                });
+                }).concat(bgImages.map(function (src) {
+                    return new Promise(function (resolve) {
+                        const img = new Image();
+                        img.onload = resolve;
+                        img.onerror = resolve;
+                        img.src = src;
+                    });
+                }));
 
                 return Promise.all(preloadImages).then(function () {
                     return animationData;
