@@ -34,13 +34,27 @@ document.addEventListener('DOMContentLoaded', function () {
             path: '/img/animation.json'
         });
 
-        anim.addEventListener('DOMLoaded', function () {
+        let lottieReady = false;
+        let pageLoaded = false;
+
+        function startAnimation() {
+            if (!lottieReady || !pageLoaded) return;
             container.classList.add('played');
             anim.play();
             const header = document.querySelector('.header');
             if (header) header.classList.add('visible');
             const pageContent = document.getElementById('page-content');
             if (pageContent) pageContent.classList.add('visible');
+        }
+
+        anim.addEventListener('DOMLoaded', function () {
+            lottieReady = true;
+            startAnimation();
+        });
+
+        window.addEventListener('load', function () {
+            pageLoaded = true;
+            startAnimation();
         });
 
         anim.addEventListener('complete', function () {
