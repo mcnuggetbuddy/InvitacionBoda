@@ -271,7 +271,6 @@ html {
     max-height: 85svh;
     width: auto;
     max-width: 600px;
-    cursor: pointer;
 }
 
 .lottie-wrapper svg {
@@ -315,7 +314,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 48px 16px;
+    padding: 300px 16px;
 }
 
 .versiculo-overlay {
@@ -348,7 +347,7 @@ html {
 
 /* ── Boda section ── */
 .boda-section {
-    padding: 48px 20px;
+    padding: 100px 20px;
 }
 
 .boda-grid {
@@ -619,7 +618,7 @@ html {
 
 /* ── Regalos section ── */
 .regalos-section {
-    padding: 64px 32px;
+    padding: 100px 32px;
 }
 
 .regalos-grid {
@@ -702,7 +701,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 24px;
+    padding: 300px 24px;
     min-height: 60vh;
 }
 

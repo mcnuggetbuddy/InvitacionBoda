@@ -35,23 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         anim.addEventListener('DOMLoaded', function () {
-            anim.goToAndStop(0, true);
+            container.classList.add('played');
+            anim.play();
+            const header = document.querySelector('.header');
+            if (header) header.classList.add('visible');
+            const pageContent = document.getElementById('page-content');
+            if (pageContent) pageContent.classList.add('visible');
         });
 
         anim.addEventListener('complete', function () {
             const arrow = document.getElementById('scroll-arrow');
             if (arrow) arrow.classList.add('visible');
-        });
-
-        container.addEventListener('click', function () {
-            if (!container.classList.contains('played')) {
-                container.classList.add('played');
-                anim.play();
-                const header = document.querySelector('.header');
-                if (header) header.classList.add('visible');
-                const pageContent = document.getElementById('page-content');
-                if (pageContent) pageContent.classList.add('visible');
-            }
         });
     }
 });
