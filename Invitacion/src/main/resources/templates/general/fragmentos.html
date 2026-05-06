@@ -2,17 +2,18 @@
 <head th:fragment="head">
     <title>Isra y Pau</title>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Playwrite+DE+SAS:wght@100;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png"/>
     <link rel="icon" type="image/png" sizes="256x256" href="/fav/favicon-256x256.png"/>
-    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/css/estilos.css}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script th:src="@{/js/rutinas.js}"></script>
-    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 
 <!--Fragmento#2 Header -->
@@ -27,8 +28,8 @@
 
             <!-- Links -->
             <ul class="navbar-nav" id="navMenu">
-                <li class="nav-item"><a class="nav-link active" href="#">[[#{plantilla.boda}]]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.nosotros}]]</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#boda">[[#{plantilla.boda}]]</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nosotros">[[#{plantilla.nosotros}]]</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.vestimenta}]]</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.regalo}]]</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.rsvp}]]</a></li>
@@ -41,15 +42,87 @@
 <!--Fragmento#3 Footer -->
 <footer th:fragment="footer" class="footer">
     <ul class="footer-nav">
-        <li><a href="#">[[#{plantilla.boda}]]</a></li>
-        <li><a href="#">[[#{plantilla.nosotros}]]</a></li>
+        <li><a href="#boda">[[#{plantilla.boda}]]</a></li>
+        <li><a href="#nosotros">[[#{plantilla.nosotros}]]</a></li>
         <li><a href="#">[[#{plantilla.vestimenta}]]</a></li>
         <li><a href="#">[[#{plantilla.regalo}]]</a></li>
         <li><a href="#">[[#{plantilla.rsvp}]]</a></li>
     </ul>
 </footer>
 
-<!--Fragmento#4 Primera Sección -->
+<!--Fragmento#4 Animación del sobre -->
 <section th:fragment="animacion" class="animation-section">
     <div id="lottie-container" class="lottie-wrapper" title="Click to play"></div>
+</section>
+
+<!--Fragmento#5 Boda -->
+<section th:fragment="boda" id="boda" class="boda-section">
+    <div class="boda-grid">
+        <div class="boda-image">
+            <img th:src="@{/img/images/Israel&amp;Paula-17.jpg}" alt="Israel y Paula"/>
+        </div>
+        <div class="boda-horario">
+            <h2>[[#{horario.titulo}]]</h2>
+            <p>[[#{horario.finca}]]</p>
+            <p>[[#{horario.locacion}]]</p>
+            <p>[[#{horario.hora}]]</p>
+            <div class="waze-row">
+                <img th:src="@{/img/images/waze.png}" alt="Waze" class="waze-icon"/>
+                <a href="https://waze.com/ul/hd1u1m2r0n" class="waze-btn" target="_blank" rel="noopener noreferrer">Waze</a>
+            </div>
+            <p>[[#{horario.descripcion}]]</p>
+        </div>
+    </div>
+</section>
+
+<!--Fragmento#6 Versículo -->
+<section th:fragment="versiculo" class="versiculo-section">
+    <div class="versiculo-overlay">
+        <blockquote class="versiculo-text">
+            <p>[[#{versiculo.versiculo}]]</p>
+            <cite>[[#{versiculo.cita}]]</cite>
+        </blockquote>
+    </div>
+</section>
+
+<!--Fragmento#7 Nosotros -->
+<section th:fragment="nosotros" id="nosotros" class="nosotros-section">
+    <div class="nosotros-grid">
+        <div class="nosotros-text">
+            <h2>[[#{nosotros.titulo}]]</h2>
+            <p>[[#{nosotros.descripcion}]]</p>
+        </div>
+        <div class="nosotros-main-image">
+            <img th:src="@{/img/images/Israel&amp;Paula-69.jpg}" alt="Israel y Paula"/>
+        </div>
+    </div>
+    <div id="nosotrosCarousel" class="carousel slide nosotros-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img th:src="@{/img/images/Israel&amp;Paula-46.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{/img/images/Israel&amp;Paula-76.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{/img/images/Israel&amp;Paula-106.jpg}" alt="Israel y Paula" class="d-block nosotros-carousel-img"/>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#nosotrosCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#nosotrosCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+</section>
+
+<!--Fragmento#8 Vestimenta -->
+<section th:fragment="vestimenta" id="vestimenta">
+
 </section>

@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    const carouselEl = document.getElementById('nosotrosCarousel');
+    if (carouselEl && typeof bootstrap !== 'undefined') {
+        new bootstrap.Carousel(carouselEl, { interval: 3000, ride: true });
+    }
+
     const container = document.getElementById('lottie-container');
     if (container && typeof lottie !== 'undefined') {
         const anim = lottie.loadAnimation({
@@ -25,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!container.classList.contains('played')) {
                 container.classList.add('played');
                 anim.play();
+                const header = document.querySelector('.header');
+                if (header) header.classList.add('visible');
             }
         });
     }
