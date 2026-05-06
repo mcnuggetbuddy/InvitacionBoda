@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "boda": "The Wedding",
+    "nosotros": "About Us",
+    "vestimenta": "Dress Code",
+    "regalo": "Gifts",
+    "rsvp": "RSVP"
+  },
+  "horario": {
+    "titulo": "Schedule",
+    "finca": "Finca Vikingos",
+    "locacion": "Birrí, Heredia",
+    "fecha": "October 24, 2026",
+    "hora": "11:00am",
+    "descripcion": "We kindly ask that you carpool with friends or family whenever possible, as parking space is limited"
+  },
+  "versiculo": {
+    "texto": "I will greatly rejoice in the LORD, my whole being shall exult in my God; for he has clothed me with the garments of salvation, he has covered me with the robe of righteousness, as a bridegroom decks himself with a garland, and as a bride adorns herself with her jewels.",
+    "cita": "Isaiah 61:10 NRSV"
+  },
+  "nosotros": {
+    "titulo": "About Us",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nil ante, vulpine ate various mass et, pharaoh vulpine ate sem. In hac habilitates platea dictum. Suspendisse flavoring lectures nil, sit amet pulmonary sem porttitor id. Sed a dolor elementum, elementum magna imperdiet, lacinia nib. Phallus incident vestibulum effendi."
+  },
+  "vestimenta": {
+    "titulo": "Dress Code",
+    "descripcion": "Formal attire. We've put together some ideas for you!",
+    "prohibido": "Please, ladies avoid wearing white dresses",
+    "mujer": "Women",
+    "hombre": "Men",
+    "click": "Click the photo to see outfit ideas"
+  },
+  "regalos": {
+    "titulo": "Gifts",
+    "descripcion": "The most important thing for us is that you are with us on our special day. But if you'd like to give a gift, you're welcome to leave a cash contribution at the gift station during the reception. You may also use the following accounts",
+    "sinpe": "SINPE:",
+    "sinpe_num": "85827555",
+    "iban_crc": "CRC Account:",
+    "iban_crc_num": "CR16010200009476238985",
+    "iban_usd": "USD Account:",
+    "iban_usd_num": "CR36010200009594512956",
+    "boton": "If you have any questions"
+  },
+  "rsvp": {
+    "titulo": "RSVP",
+    "importante": "Important",
+    "descripcion": "We would love to have you join us on this special day, but we need you to confirm your attendance. Click the button below to access the form that must be completed before the deadline",
+    "prohibido": "No additional guests beyond those indicated are allowed",
+    "limite": "Deadline:",
+    "fecha": "September 24, 2026",
+    "form": "Go to the form"
+  }
+}

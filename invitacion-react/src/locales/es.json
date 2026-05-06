@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "boda": "La Boda",
+    "nosotros": "Nosotros",
+    "vestimenta": "Vestimenta",
+    "regalo": "Regalos",
+    "rsvp": "RSVP"
+  },
+  "horario": {
+    "titulo": "Horario",
+    "finca": "Finca Vikingos",
+    "locacion": "Birrí, Heredia",
+    "fecha": "24 de Octubre 2026",
+    "hora": "11:00am",
+    "descripcion": "Les pedimos en la medida de lo posible que realicen carpool con amigos o familiares ya que el espacio de parqueo es limitado"
+  },
+  "versiculo": {
+    "texto": "Por causa del SEÑOR me alegro mucho y todo mi ser se llena de felicidad. Porque me ha vestido de salvación y me ha puesto una capa de libertad. Quedé como un novio vestido para la boda o como una novia adornada con sus joyas.",
+    "cita": "Isaías 61:10 PDT"
+  },
+  "nosotros": {
+    "titulo": "Nosotros",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nil ante, vulpine ate various mass et, pharaoh vulpine ate sem. In hac habilitates platea dictum. Suspendisse flavoring lectures nil, sit amet pulmonary sem porttitor id. Sed a dolor elementum, elementum magna imperdiet, lacinia nib. Phallus incident vestibulum effendi."
+  },
+  "vestimenta": {
+    "titulo": "Código de Vestimenta",
+    "descripcion": "Formal. Les pasamos por acá ideas para ese día!",
+    "prohibido": "Por favor, mujeres no usar vestidos de color blanco",
+    "mujer": "Mujeres",
+    "hombre": "Hombres",
+    "click": "Darle click a la foto para ver opciones"
+  },
+  "regalos": {
+    "titulo": "Regalos",
+    "descripcion": "Lo más importante para nosotros es que nos acompañes en nuestro día. Pero si desean obsequiarnos algo, pueden hacernos un obsequio en efectivo en la estación de muestras de cariño en la recepción. O bien estarán habilitadas las siguientes cuentas",
+    "sinpe": "SINPE:",
+    "sinpe_num": "85827555",
+    "iban_crc": "Cuenta ₡:",
+    "iban_crc_num": "CR16010200009476238985",
+    "iban_usd": "Cuenta $:",
+    "iban_usd_num": "CR36010200009594512956",
+    "boton": "Si tenés alguna duda"
+  },
+  "rsvp": {
+    "titulo": "RSVP",
+    "importante": "Importante",
+    "descripcion": "Nos encantaría que nos acompañes en este día tan especial, pero para eso necesitas confirmar asistencia. Al darle click al botón abajo, te dirigirá a un formulario que debes llenar antes de la fecha límite",
+    "prohibido": "No se permite llevar personas extra o adicionales a las indicadas",
+    "limite": "Fecha límite:",
+    "fecha": "24 de Setiembre del 2026",
+    "form": "Ir al formulario"
+  }
+}
