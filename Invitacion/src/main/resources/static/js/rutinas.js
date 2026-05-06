@@ -7,6 +7,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    const langToggler = document.getElementById('langToggler');
+    const langMenu = document.getElementById('langMenu');
+    if (langToggler && langMenu) {
+        langToggler.addEventListener('click', function (e) {
+            e.stopPropagation();
+            langMenu.classList.toggle('open');
+        });
+        document.addEventListener('click', function () {
+            langMenu.classList.remove('open');
+        });
+    }
+
     const carouselEl = document.getElementById('nosotrosCarousel');
     if (carouselEl && typeof bootstrap !== 'undefined') {
         new bootstrap.Carousel(carouselEl, { interval: 3000, ride: true });
@@ -26,12 +38,19 @@ document.addEventListener('DOMContentLoaded', function () {
             anim.goToAndStop(0, true);
         });
 
+        anim.addEventListener('complete', function () {
+            const arrow = document.getElementById('scroll-arrow');
+            if (arrow) arrow.classList.add('visible');
+        });
+
         container.addEventListener('click', function () {
             if (!container.classList.contains('played')) {
                 container.classList.add('played');
                 anim.play();
                 const header = document.querySelector('.header');
                 if (header) header.classList.add('visible');
+                const pageContent = document.getElementById('page-content');
+                if (pageContent) pageContent.classList.add('visible');
             }
         });
     }

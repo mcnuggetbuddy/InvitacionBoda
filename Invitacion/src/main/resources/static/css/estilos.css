@@ -14,10 +14,72 @@ html {
     pointer-events: auto;
 }
 
-.header .navbar {
+.header-inner {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+}
+
+.header-inner .navbar {
+    flex: 1;
     display: flex;
     justify-content: center;
-    padding: 16px;
+    padding: 0;
+}
+
+.lang-switcher {
+    position: relative;
+}
+
+.lang-toggle {
+    background: rgba(245, 219, 240, 0.45);
+    border: 1.5px solid #f5dbf0;
+    border-radius: 50px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #3a3230;
+    display: flex;
+    align-items: center;
+    transition: background 0.25s ease;
+}
+
+.lang-toggle:hover {
+    background: rgba(245, 219, 240, 0.7);
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: rgba(245, 219, 240, 0.95);
+    border: 1.5px solid #f5dbf0;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 60px;
+    z-index: 200;
+}
+
+.lang-dropdown.open {
+    display: block;
+}
+
+.lang-option {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: #3a3230;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.lang-option:hover {
+    background: rgba(201, 160, 154, 0.2);
 }
 
 .navbar-pill {
@@ -103,6 +165,35 @@ html {
 
 /* ── Mobile ── */
 @media (max-width: 767.98px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .header-inner .navbar {
+        justify-content: flex-start;
+    }
+
+    .animation-section {
+        padding: 0;
+        height: 100svh;
+        width: 100%;
+    }
+
+    .lottie-wrapper {
+        max-width: none;
+        width: 100svh;
+        height: 100svh;
+    }
+
+    .lottie-wrapper svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
     .navbar-pill {
         flex-direction: column;
         align-items: flex-start;
@@ -142,29 +233,77 @@ html {
     }
 }
 
+/* ── Page content ── */
+.page-content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+.page-content.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* ── Hero section ── */
 .hero-section {
     background-image: url('/img/images/background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ── Animation section ── */
 .animation-section {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 24px 16px 0;
+    flex: 1;
+    position: relative;
 }
 
 .lottie-wrapper {
-    width: 100%;
+    aspect-ratio: 1700 / 2750;
+    max-height: 85svh;
+    width: auto;
     max-width: 600px;
     cursor: pointer;
 }
 
+.lottie-wrapper svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .lottie-wrapper.played {
     cursor: default;
+}
+
+.scroll-arrow {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #f5dbf0;
+    animation: bounce 1.2s infinite;
+}
+
+.scroll-arrow.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(10px); }
 }
 
 /* ── Versículo section ── */
@@ -176,20 +315,21 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 32px;
+    padding: 48px 16px;
 }
 
 .versiculo-overlay {
     background: rgba(255, 255, 255, 0.55);
     border-radius: 12px;
-    padding: 48px 56px;
+    padding: 32px 28px;
     max-width: 680px;
+    width: 100%;
     text-align: center;
 }
 
 .versiculo-text p {
     font-family: 'Playwrite DE SAS', cursive;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.05rem;
     letter-spacing: 0;
     line-height: 1.9;
@@ -208,7 +348,7 @@ html {
 
 /* ── Boda section ── */
 .boda-section {
-    padding: 64px 32px;
+    padding: 48px 20px;
 }
 
 .boda-grid {
@@ -222,8 +362,7 @@ html {
 
 .boda-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
     border-radius: 8px;
 }
@@ -236,7 +375,7 @@ html {
 
 .boda-horario h2 {
     font-family: 'Playwrite DE SAS', cursive;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0;
     color: #3a3230;
@@ -290,7 +429,7 @@ html {
 
 /* ── Nosotros section ── */
 .nosotros-section {
-    padding: 80px 32px 64px;
+    padding: 48px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -305,7 +444,7 @@ html {
 
 .nosotros-text h2 {
     font-family: 'Playwrite DE SAS', cursive;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0;
     color: #3a3230;
@@ -333,13 +472,12 @@ html {
 .nosotros-carousel {
     border-radius: 8px;
     overflow: hidden;
-    max-height: 520px;
     position: relative;
 }
 
 .nosotros-carousel-img {
     width: 100%;
-    height: 520px;
+    height: clamp(260px, 50vw, 520px);
     object-fit: cover;
     object-position: center;
 }
@@ -374,6 +512,277 @@ html {
     }
 
 
+}
+
+/* ── Vestimenta section ── */
+.vestimenta-section {
+    background-image: url('/img/images/foto-vestimenta.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 64px 32px;
+}
+
+.vestimenta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.vestimenta-text {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 32px 28px;
+}
+
+.vestimenta-text h2 {
+    font-family: 'Playwrite DE SAS', cursive;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    color: #3a3230;
+    margin: 0 0 20px;
+}
+
+.vestimenta-text p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    color: #3a3230;
+    margin: 0 0 12px;
+}
+
+.vestimenta-prohibido {
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.vestimenta-outfits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.outfit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 16px 12px;
+}
+
+.outfit-title {
+    font-family: 'Playwrite DE SAS', cursive;
+    font-weight: 400;
+    font-size: 1.40rem;
+    letter-spacing: 0.08em;
+    color: #3a3230;
+    margin: 0;
+    text-align: center;
+}
+
+.outfit-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.outfit-click {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: #3a3230;
+    margin: 0;
+    text-align: center;
+    opacity: 0.7;
+}
+
+@media (max-width: 767.98px) {
+    .vestimenta-section {
+        padding: 48px 20px;
+    }
+
+    .vestimenta-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* ── Regalos section ── */
+.regalos-section {
+    padding: 64px 32px;
+}
+
+.regalos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.regalos-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.regalos-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.regalos-text h2 {
+    font-family: 'Playwrite DE SAS', cursive;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    color: #3a3230;
+    margin: 0;
+}
+
+.regalos-text p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    color: #3a3230;
+    margin: 0;
+}
+
+.regalos-btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    color: #3a3230;
+    text-decoration: none;
+    border: 1px solid #3a3230;
+    border-radius: 50px;
+    padding: 10px 24px;
+    text-align: center;
+    transition: background 0.25s ease, color 0.25s ease;
+    align-self: flex-start;
+}
+
+.regalos-btn:hover {
+    background: #3a3230;
+    color: #f5dbf0;
+}
+
+@media (max-width: 767.98px) {
+    .regalos-section {
+        padding: 48px 20px;
+    }
+
+    .regalos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── RSVP section ── */
+.rsvp-section {
+    background-image: url('/img/images/foto_rsvp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 24px;
+    min-height: 60vh;
+}
+
+.rsvp-overlay {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 48px 56px;
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.rsvp-titulo {
+    font-family: 'Playwrite DE SAS', cursive;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    color: #3a3230;
+    margin: 0;
+}
+
+.rsvp-importante {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    color: #3a3230;
+    margin: 0;
+}
+
+.rsvp-descripcion {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    color: #3a3230;
+    margin: 0;
+}
+
+.rsvp-limite {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    color: #3a3230;
+    margin: 0;
+}
+
+.rsvp-limite span {
+    font-weight: 400;
+}
+
+.rsvp-btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    color: #3a3230;
+    text-decoration: none;
+    border: 1px solid #3a3230;
+    border-radius: 50px;
+    padding: 10px 28px;
+    margin-top: 8px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.rsvp-btn:hover {
+    background: #3a3230;
+    color: #f5dbf0;
+}
+
+@media (max-width: 767.98px) {
+    .rsvp-overlay {
+        padding: 32px 24px;
+    }
 }
 
 /* ── Footer ── */

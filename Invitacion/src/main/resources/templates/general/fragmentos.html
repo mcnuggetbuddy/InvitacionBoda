@@ -2,6 +2,7 @@
 <head th:fragment="head">
     <title>Isra y Pau</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Playwrite+DE+SAS:wght@100;400&display=swap" rel="stylesheet">
@@ -18,25 +19,40 @@
 
 <!--Fragmento#2 Header -->
 <header th:fragment="header" class="header">
-    <nav class="navbar">
-        <div class="navbar-pill">
+    <div class="header-inner">
+        <nav class="navbar">
+            <div class="navbar-pill">
 
-            <!-- Mobile toggler -->
-            <button class="navbar-toggler" id="navToggler" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <!-- Mobile toggler -->
+                <button class="navbar-toggler" id="navToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <ul class="navbar-nav" id="navMenu">
+                    <li class="nav-item"><a class="nav-link active" href="#boda">[[#{plantilla.boda}]]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">[[#{plantilla.nosotros}]]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vestimenta">[[#{plantilla.vestimenta}]]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#regalos">[[#{plantilla.regalo}]]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rsvp">[[#{plantilla.rsvp}]]</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-toggle" id="langToggler" aria-label="Select language">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
             </button>
-
-            <!-- Links -->
-            <ul class="navbar-nav" id="navMenu">
-                <li class="nav-item"><a class="nav-link active" href="#boda">[[#{plantilla.boda}]]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#nosotros">[[#{plantilla.nosotros}]]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.vestimenta}]]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.regalo}]]</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">[[#{plantilla.rsvp}]]</a></li>
-            </ul>
-
+            <div class="lang-dropdown" id="langMenu">
+                <a href="?lang=es" class="lang-option">ES</a>
+                <a href="?lang=en" class="lang-option">EN</a>
+            </div>
         </div>
-    </nav>
+    </div>
 </header>
 
 <!--Fragmento#3 Footer -->
@@ -44,15 +60,16 @@
     <ul class="footer-nav">
         <li><a href="#boda">[[#{plantilla.boda}]]</a></li>
         <li><a href="#nosotros">[[#{plantilla.nosotros}]]</a></li>
-        <li><a href="#">[[#{plantilla.vestimenta}]]</a></li>
-        <li><a href="#">[[#{plantilla.regalo}]]</a></li>
-        <li><a href="#">[[#{plantilla.rsvp}]]</a></li>
+        <li><a href="#vestimenta">[[#{plantilla.vestimenta}]]</a></li>
+        <li><a href="#regalos">[[#{plantilla.regalo}]]</a></li>
+        <li><a href="#rsvp">[[#{plantilla.rsvp}]]</a></li>
     </ul>
 </footer>
 
 <!--Fragmento#4 Animación del sobre -->
 <section th:fragment="animacion" class="animation-section">
     <div id="lottie-container" class="lottie-wrapper" title="Click to play"></div>
+    <div id="scroll-arrow" class="scroll-arrow">&#8595;</div>
 </section>
 
 <!--Fragmento#5 Boda -->
@@ -123,6 +140,49 @@
 </section>
 
 <!--Fragmento#8 Vestimenta -->
-<section th:fragment="vestimenta" id="vestimenta">
+<section th:fragment="vestimenta" id="vestimenta" class="vestimenta-section">
+    <div class="vestimenta-grid">
+        <div class="vestimenta-text">
+            <h2>[[#{vestimenta.titulo}]]</h2>
+            <p>[[#{vestimenta.descripcion}]]</p>
+            <p class="vestimenta-prohibido">[[#{vestimenta.prohibido}]]</p>
+        </div>
+        <div class="vestimenta-outfits">
+            <div class="outfit-card">
+                <p class="outfit-title">[[#{vestimenta.mujer}]]</p>
+                <img th:src="@{/img/images/drawing_mujer.png}" alt="Vestimenta mujer" class="outfit-img"/>
+                <p class="outfit-click">[[#{vestimenta.click}]]</p>
+            </div>
+            <div class="outfit-card">
+                <p class="outfit-title">[[#{vestimenta.hombre}]]</p>
+                <img th:src="@{/img/images/drawing_hombre.png}" alt="Vestimenta hombre" class="outfit-img"/>
+                <p class="outfit-click">[[#{vestimenta.click}]]</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!--Fragmento#9 Regalos -->
+<section th:fragment="regalos" id="regalos" class="regalos-section">
+    <div class="regalos-grid">
+        <div class="regalos-image">
+            <img th:src="@{/img/images/Israel&amp;Paula-114.jpg}" alt="Israel y Paula"/>
+        </div>
+        <div class="regalos-text">
+            <h2>[[#{regalos.titulo}]]</h2>
+            <p>[[#{regalos.descripcion}]]</p>
+            <a href="https://wa.me/50685827555" class="regalos-btn" target="_blank" rel="noopener noreferrer">[[#{regalos.boton}]]</a>
+        </div>
+    </div>
+</section>
+
+<!--Fragmento#10 RSVP -->
+<section th:fragment="rsvp" id="rsvp" class="rsvp-section">
+    <div class="rsvp-overlay">
+        <h2 class="rsvp-titulo">[[#{rsvp.titulo}]]</h2>
+        <p class="rsvp-importante">[[#{rsvp.importante}]]</p>
+        <p class="rsvp-descripcion">[[#{rsvp.descripcion}]]</p>
+        <p class="rsvp-limite"><span>[[#{rsvp.límite}]]</span> [[#{rsvp.fecha}]]</p>
+        <a href="https://form.typeform.com/to/qqMnAotL" class="rsvp-btn" target="_blank" rel="noopener noreferrer">[[#{rsvp.form}]]</a>
+    </div>
 </section>
