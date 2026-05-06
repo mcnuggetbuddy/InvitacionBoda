@@ -66,7 +66,7 @@ html {
 }
 
 .lang-option {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -107,7 +107,7 @@ html {
 }
 
 .navbar-pill .nav-link {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -327,7 +327,7 @@ html {
 }
 
 .versiculo-text p {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.05rem;
     letter-spacing: 0;
@@ -337,7 +337,7 @@ html {
 }
 
 .versiculo-text cite {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
@@ -373,7 +373,7 @@ html {
 }
 
 .boda-horario h2 {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0;
@@ -394,7 +394,7 @@ html {
 }
 
 .waze-btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.06em;
@@ -412,7 +412,7 @@ html {
 }
 
 .boda-horario p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.06em;
@@ -428,7 +428,7 @@ html {
 
 /* ── Nosotros section ── */
 .nosotros-section {
-    padding: 48px 20px;
+    padding: 100px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -442,7 +442,7 @@ html {
 }
 
 .nosotros-text h2 {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0;
@@ -451,7 +451,7 @@ html {
 }
 
 .nosotros-text p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
@@ -519,7 +519,7 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 64px 32px;
+    padding: 200px 32px;
 }
 
 .vestimenta-grid {
@@ -538,7 +538,7 @@ html {
 }
 
 .vestimenta-text h2 {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0;
@@ -547,7 +547,7 @@ html {
 }
 
 .vestimenta-text p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
@@ -556,9 +556,9 @@ html {
     margin: 0 0 12px;
 }
 
-.vestimenta-prohibido {
+.vestimenta-text p.vestimenta-prohibido {
     font-style: italic;
-    opacity: 0.75;
+    font-weight: 600;
 }
 
 .vestimenta-outfits {
@@ -579,10 +579,10 @@ html {
 }
 
 .outfit-title {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.40rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.00em;
     color: #3a3230;
     margin: 0;
     text-align: center;
@@ -595,7 +595,7 @@ html {
 }
 
 .outfit-click {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.75rem;
     letter-spacing: 0.06em;
@@ -644,7 +644,7 @@ html {
 }
 
 .regalos-text h2 {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0;
@@ -653,7 +653,7 @@ html {
 }
 
 .regalos-text p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
@@ -663,7 +663,7 @@ html {
 }
 
 .regalos-btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.06em;
@@ -719,7 +719,7 @@ html {
 }
 
 .rsvp-titulo {
-    font-family: 'Playwrite DE SAS', cursive;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
     font-size: 1.6rem;
     letter-spacing: 0;
@@ -728,7 +728,7 @@ html {
 }
 
 .rsvp-importante {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
     letter-spacing: 0.04em;
@@ -737,7 +737,7 @@ html {
 }
 
 .rsvp-descripcion {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
@@ -747,7 +747,7 @@ html {
 }
 
 .rsvp-limite {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
@@ -760,7 +760,7 @@ html {
 }
 
 .rsvp-btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
     letter-spacing: 0.06em;
@@ -807,7 +807,7 @@ html {
 }
 
 .footer-nav a {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 0.78rem;
     letter-spacing: 0.08em;

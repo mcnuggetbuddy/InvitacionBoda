@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Playwrite+DE+SAS:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png"/>
@@ -82,6 +82,7 @@
             <h2>[[#{horario.titulo}]]</h2>
             <p>[[#{horario.finca}]]</p>
             <p>[[#{horario.locacion}]]</p>
+            <p>[[#{horario.fecha}]]</p>
             <p>[[#{horario.hora}]]</p>
             <div class="waze-row">
                 <img th:src="@{/img/images/waze.png}" alt="Waze" class="waze-icon"/>
@@ -171,6 +172,9 @@
         <div class="regalos-text">
             <h2>[[#{regalos.titulo}]]</h2>
             <p>[[#{regalos.descripcion}]]</p>
+            <p><strong>[[#{regalos.sinpe}]]</strong> [[#{regalos.sinpe.num}]]</p>
+            <p><strong>[[#{regalos.iban.crc}]]</strong> [[#{regalos.iban.crc.num}]]</p>
+            <p><strong>[[#{regalos.iban.usd}]]</strong> [[#{regalos.iban.usd.num}]]</p>
             <a href="https://wa.me/50685827555" class="regalos-btn" target="_blank" rel="noopener noreferrer">[[#{regalos.boton}]]</a>
         </div>
     </div>
@@ -182,6 +186,7 @@
         <h2 class="rsvp-titulo">[[#{rsvp.titulo}]]</h2>
         <p class="rsvp-importante">[[#{rsvp.importante}]]</p>
         <p class="rsvp-descripcion">[[#{rsvp.descripcion}]]</p>
+        <p class="rsvp-descripcion">[[#{rsvp.prohibido}]]</p>
         <p class="rsvp-limite"><span>[[#{rsvp.límite}]]</span> [[#{rsvp.fecha}]]</p>
         <a href="https://form.typeform.com/to/qqMnAotL" class="rsvp-btn" target="_blank" rel="noopener noreferrer">[[#{rsvp.form}]]</a>
     </div>
