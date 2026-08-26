@@ -18,6 +18,7 @@ export default function RsvpForm() {
   const [asiste, setAsiste] = useState(null);
   const [personas, setPersonas] = useState(1);
   const [acompanantes, setAcompanantes] = useState(['', '', '']);
+  const [tieneAlergias, setTieneAlergias] = useState(null);
   const [alergias, setAlergias] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState(null);
@@ -40,7 +41,7 @@ export default function RsvpForm() {
       acompanante1: asiste && personas >= 2 ? acompanantes[0].trim() : '',
       acompanante2: asiste && personas >= 3 ? acompanantes[1].trim() : '',
       acompanante3: asiste && personas >= 4 ? acompanantes[2].trim() : '',
-      alergias: asiste ? alergias.trim() : '',
+      alergias: asiste && tieneAlergias ? alergias.trim() : '',
       idioma: i18n.language,
     };
 
@@ -190,15 +191,42 @@ export default function RsvpForm() {
             </label>
           )}
 
-          <label className="rsvp-field">
-            <span>{t('rsvp.form.alergias_label')}</span>
-            <textarea
-              rows="3"
-              value={alergias}
-              onChange={e => setAlergias(e.target.value)}
-              placeholder={t('rsvp.form.alergias_placeholder')}
-            />
-          </label>
+          <fieldset className="rsvp-field rsvp-field-radio">
+            <legend>{t('rsvp.form.alergias_pregunta', { count: personas })}</legend>
+            <div className="rsvp-radio-group">
+              <label className={`rsvp-radio${tieneAlergias === false ? ' active' : ''}`}>
+                <input
+                  type="radio"
+                  name="tieneAlergias"
+                  checked={tieneAlergias === false}
+                  onChange={() => setTieneAlergias(false)}
+                />
+                <span>{t('rsvp.form.alergias_no', { count: personas })}</span>
+              </label>
+              <label className={`rsvp-radio${tieneAlergias === true ? ' active' : ''}`}>
+                <input
+                  type="radio"
+                  name="tieneAlergias"
+                  checked={tieneAlergias === true}
+                  onChange={() => setTieneAlergias(true)}
+                />
+                <span>{t('rsvp.form.alergias_si')}</span>
+              </label>
+            </div>
+          </fieldset>
+
+          {tieneAlergias === true && (
+            <label className="rsvp-field">
+              <span>{t('rsvp.form.alergias_detalle_label', { count: personas })}</span>
+              <textarea
+                rows="3"
+                required
+                value={alergias}
+                onChange={e => setAlergias(e.target.value)}
+                placeholder={t('rsvp.form.alergias_placeholder', { count: personas })}
+              />
+            </label>
+          )}
         </>
       )}
 
