@@ -234,7 +234,12 @@ export default function RsvpForm() {
         <p className="rsvp-form-error">{t('rsvp.form.error')}</p>
       )}
 
-      <button type="submit" className="rsvp-btn" disabled={submitting || asiste === null}>
+      <button
+        type="submit"
+        className="rsvp-btn"
+        disabled={submitting || asiste === null}
+        aria-busy={submitting}
+      >
         {submitting ? t('rsvp.form.submitting') : t('rsvp.form.submit')}
       </button>
     </form>

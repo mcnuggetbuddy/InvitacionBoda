@@ -10,13 +10,14 @@ const slides = [
   { src: `${R2}Isra&Paula-65.webp`, alt: 'Israel y Paula' },
 ];
 
-const AUTOPLAY_MS = 3000;
+const AUTOPLAY_MS = 3500;
 
 export default function Nosotros() {
   const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
+  const [preloaded, setPreloaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -26,23 +27,32 @@ export default function Nosotros() {
   }, []);
 
   useEffect(() => {
-    if (!sectionRef.current || hasStarted) return;
+    if (!sectionRef.current || preloaded) return;
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setHasStarted(true);
+        setPreloaded(true);
         slides.forEach(s => { const img = new Image(); img.src = s.src; });
         observer.disconnect();
       }
     }, { rootMargin: '400px 0px', threshold: 0 });
     observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  }, [hasStarted]);
+  }, [preloaded]);
 
   useEffect(() => {
-    if (paused || !hasStarted) return;
+    if (!sectionRef.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    }, { threshold: 0.3 });
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (paused || !isVisible) return;
     const timer = setTimeout(() => setCurrent(i => (i + 1) % slides.length), AUTOPLAY_MS);
     return () => clearTimeout(timer);
-  }, [current, paused, hasStarted]);
+  }, [current, paused, isVisible]);
 
   const touchStartX = useRef(null);
 

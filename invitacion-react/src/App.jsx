@@ -1,4 +1,6 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 import './i18n';
 import './estilos.css';
 
@@ -54,6 +56,7 @@ export default function App() {
     Promise.all([preloadImage(CRITICAL_BG), animationPromise]).then(([, data]) => {
       setAnimationData(data);
       setReady(true);
+      document.getElementById('initial-loader')?.remove();
       if (restoringScroll) {
         setVisible(true);
         window.scrollTo(0, scrollTarget);
@@ -87,6 +90,8 @@ export default function App() {
           <Footer />
         </Suspense>
       </div>
+      <SpeedInsights />
+      <Analytics />
     </>
   );
 }

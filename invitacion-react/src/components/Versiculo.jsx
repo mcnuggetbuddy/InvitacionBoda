@@ -6,9 +6,7 @@ export default function Versiculo() {
     <section className="versiculo-section">
       <div className="versiculo-overlay">
         <blockquote className="versiculo-text">
-          {t('versiculo.texto').split('\n\n').map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
+          <p>{t('versiculo.texto')}</p>
           <cite>{t('versiculo.cita')}</cite>
         </blockquote>
       </div>
