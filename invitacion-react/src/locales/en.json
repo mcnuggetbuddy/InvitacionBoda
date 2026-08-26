@@ -44,11 +44,32 @@
   "rsvp": {
     "titulo": "RSVP",
     "importante": "Important",
-    "descripcion": "We would love to have you join us on this special day, but we need you to confirm your attendance. Click the button below to access the form that must be completed before the deadline",
-    "individual": "If your invitation includes multiple guests, each person must fill out the form separately",
+    "descripcion": "We would love to have you join us on this special day. Please confirm your attendance before the deadline",
+    "individual": "If you're responsible for your family or partner, you can confirm for everyone in a single form",
     "prohibido": "No additional guests beyond those indicated are allowed",
     "limite": "Deadline:",
     "fecha": "September 24, 2026",
-    "form": "Go to the form"
+    "form": {
+      "nombre_label": "Your full name",
+      "nombre_placeholder": "e.g. María González",
+      "telefono_label": "Phone",
+      "telefono_placeholder": "8888-8888",
+      "asiste_label": "Will you attend?",
+      "asiste_si": "Yes, I'll be there",
+      "asiste_no": "I can't attend",
+      "personas_label": "How many people are you confirming (including yourself)?",
+      "acompanante_label": "Full name of guest {{n}}",
+      "acompanante_placeholder": "e.g. Juan Pérez",
+      "alergias_label": "Does anyone have allergies or dietary restrictions?",
+      "alergias_placeholder": "Let us know here (optional)",
+      "submit": "Confirm attendance",
+      "submitting": "Sending…",
+      "success_titulo": "Confirmation received!",
+      "success_texto": "Thanks for confirming. See you soon.",
+      "success_no_titulo": "Thanks for letting us know",
+      "success_no_texto": "We'll miss you, but we appreciate the heads up.",
+      "error": "Something went wrong. Please try again or reach out via WhatsApp.",
+      "required": "This field is required"
+    }
   }
 }

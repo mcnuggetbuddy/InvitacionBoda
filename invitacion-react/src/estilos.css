@@ -935,9 +935,164 @@ html {
     color: #f5dbf0;
 }
 
+.rsvp-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.rsvp-form {
+    width: 100%;
+    max-width: 480px;
+    margin: 24px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.rsvp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    color: #3a3230;
+}
+
+.rsvp-field > span,
+.rsvp-field > legend {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 0;
+}
+
+.rsvp-field input,
+.rsvp-field select,
+.rsvp-field textarea {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    border: 1px solid rgba(58, 50, 48, 0.35);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #3a3230;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    outline: none;
+}
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+    border-color: #3a3230;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.rsvp-field textarea {
+    resize: vertical;
+    min-height: 72px;
+}
+
+.rsvp-phone {
+    display: flex;
+    gap: 8px;
+}
+
+.rsvp-phone-code {
+    flex: 0 0 auto;
+    max-width: 130px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    border: 1px solid rgba(58, 50, 48, 0.35);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #3a3230;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.rsvp-phone-code:focus {
+    border-color: #3a3230;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.rsvp-phone input {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.rsvp-field-radio {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rsvp-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rsvp-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid rgba(58, 50, 48, 0.35);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.rsvp-radio:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.rsvp-radio.active {
+    border-color: #3a3230;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.rsvp-radio input {
+    accent-color: #3a3230;
+    margin: 0;
+}
+
+.rsvp-form-success {
+    text-align: center;
+    padding: 24px 0;
+    font-family: 'Outfit', sans-serif;
+    color: #3a3230;
+}
+
+.rsvp-form-success h3 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.rsvp-form-error {
+    color: #a33;
+    font-size: 0.9rem;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.rsvp-form .rsvp-btn {
+    align-self: center;
+    margin-top: 8px;
+    cursor: pointer;
+    background: transparent;
+}
+
 @media (max-width: 767.98px) {
     .rsvp-overlay {
         padding: 32px 24px;
+    }
+    .rsvp-radio-group {
+        flex-direction: column;
     }
 }
 

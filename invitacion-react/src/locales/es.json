@@ -44,11 +44,32 @@
   "rsvp": {
     "titulo": "RSVP",
     "importante": "Importante",
-    "descripcion": "Nos encantaría que nos acompañes en este día tan especial, pero para eso necesitas confirmar asistencia. Al darle click al botón abajo, te dirigirá a un formulario que debes llenar antes de la fecha límite",
-    "individual": "Cada invitado debe llenar el formulario por separado",
+    "descripcion": "Nos encantaría que nos acompañes en este día tan especial. Por favor confirmá tu asistencia antes de la fecha límite",
+    "individual": "Si sos responsable de tu familia o pareja, podés confirmar por todos en un solo formulario",
     "prohibido": "No se permite llevar personas extra o adicionales a las indicadas",
     "limite": "Fecha límite:",
     "fecha": "24 de Setiembre del 2026",
-    "form": "Ir al formulario"
+    "form": {
+      "nombre_label": "Tu nombre completo",
+      "nombre_placeholder": "Ej. María González",
+      "telefono_label": "Teléfono",
+      "telefono_placeholder": "8888-8888",
+      "asiste_label": "¿Podrás asistir?",
+      "asiste_si": "Sí, ahí estaré",
+      "asiste_no": "No podré asistir",
+      "personas_label": "¿Cuántas personas confirmás en total (incluyéndote)?",
+      "acompanante_label": "Nombre completo del acompañante {{n}}",
+      "acompanante_placeholder": "Ej. Juan Pérez",
+      "alergias_label": "¿Alguien tiene alergias o restricciones alimentarias?",
+      "alergias_placeholder": "Escribinos aquí (opcional)",
+      "submit": "Confirmar asistencia",
+      "submitting": "Enviando…",
+      "success_titulo": "¡Confirmación recibida!",
+      "success_texto": "Gracias por confirmar. Nos vemos pronto.",
+      "success_no_titulo": "Gracias por avisarnos",
+      "success_no_texto": "Te vamos a extrañar, pero apreciamos que nos hayas hecho saber.",
+      "error": "Ocurrió un error al enviar. Intentá de nuevo o escribinos por WhatsApp.",
+      "required": "Este campo es obligatorio"
+    }
   }
 }
