@@ -45,6 +45,7 @@
     "titulo": "RSVP",
     "importante": "Important",
     "descripcion": "We would love to have you join us on this special day, but we need you to confirm your attendance. Click the button below to access the form that must be completed before the deadline",
+    "individual": "If your invitation includes multiple guests, each person must fill out the form separately",
     "prohibido": "No additional guests beyond those indicated are allowed",
     "limite": "Deadline:",
     "fecha": "September 24, 2026",

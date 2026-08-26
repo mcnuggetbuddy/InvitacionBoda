@@ -879,6 +879,11 @@ html {
     margin: 0;
 }
 
+.rsvp-individual {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
 .rsvp-limite {
     font-family: 'Outfit', sans-serif;
     font-weight: 500;
