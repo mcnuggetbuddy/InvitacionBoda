@@ -17,7 +17,7 @@ const Rsvp = lazy(() => import('./components/Rsvp'));
 const Footer = lazy(() => import('./components/Footer'));
 
 const R2 = 'https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/';
-const CRITICAL_BG = `${R2}background.jpeg`;
+const CRITICAL_BG = `${R2}background.webp`;
 const SECONDARY_BG = [
   `${R2}foto-versiculo.jpg`,
   `${R2}foto-vestimenta.jpg`,
