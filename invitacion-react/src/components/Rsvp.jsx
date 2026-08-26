@@ -10,7 +10,6 @@ export default function Rsvp() {
         <p className="rsvp-descripcion">{t('rsvp.descripcion')}</p>
         <p className="rsvp-descripcion">{t('rsvp.prohibido')}</p>
         <p className="rsvp-limite"><span>{t('rsvp.limite')}</span> {t('rsvp.fecha')}</p>
-        <p className="rsvp-descripcion rsvp-individual">{t('rsvp.individual')}</p>
         <a href="https://form.typeform.com/to/qqMnAotL" className="rsvp-btn" target="_blank" rel="noopener noreferrer">
           {t('rsvp.form')}
         </a>
