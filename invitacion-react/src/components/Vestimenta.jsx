@@ -16,14 +16,30 @@ export default function Vestimenta() {
           <div className="outfit-card">
             <p className="outfit-title">{t('vestimenta.mujer')}</p>
             <a href="https://pin.it/1KsZvCdN6" target="_blank" rel="noopener noreferrer">
-              <img src={`${R2}drawing_mujer.png`} alt="Vestimenta mujer" className="outfit-img" />
+              <img
+                src={`${R2}drawing_mujer.png`}
+                alt="Vestimenta mujer"
+                className="outfit-img"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="600"
+              />
             </a>
             <p className="outfit-click">{t('vestimenta.click')}</p>
           </div>
           <div className="outfit-card">
             <p className="outfit-title">{t('vestimenta.hombre')}</p>
             <a href="https://pin.it/1xiaX9CSR" target="_blank" rel="noopener noreferrer">
-              <img src={`${R2}drawing_hombre.png`} alt="Vestimenta hombre" className="outfit-img" />
+              <img
+                src={`${R2}drawing_hombre.png`}
+                alt="Vestimenta hombre"
+                className="outfit-img"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="600"
+              />
             </a>
             <p className="outfit-click">{t('vestimenta.click')}</p>
           </div>

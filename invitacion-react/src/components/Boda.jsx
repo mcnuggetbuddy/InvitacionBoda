@@ -8,7 +8,14 @@ export default function Boda() {
     <section id="boda" className="boda-section">
       <div className="boda-grid">
         <div className="boda-image">
-          <img src={`${R2}Israel&Paula-17.jpg`} alt="Israel y Paula" />
+          <img
+            src={`${R2}Israel&Paula-17.jpg`}
+            alt="Israel y Paula"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="1000"
+          />
         </div>
         <div className="boda-horario">
           <h2>{t('horario.titulo')}</h2>
@@ -17,7 +24,15 @@ export default function Boda() {
           <p>{t('horario.finca')}</p>
           <p>{t('horario.locacion')}</p>       
           <div className="waze-row">
-            <img src={`${R2}waze.png`} alt="Waze" className="waze-icon" />
+            <img
+              src={`${R2}waze.png`}
+              alt="Waze"
+              className="waze-icon"
+              loading="lazy"
+              decoding="async"
+              width="32"
+              height="32"
+            />
             <a href="https://waze.com/ul/hd1u1m2r0n" className="waze-btn" target="_blank" rel="noopener noreferrer">Waze</a>
           </div>
           <p>{t('horario.descripcion')}</p>

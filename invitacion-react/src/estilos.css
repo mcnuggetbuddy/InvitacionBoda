@@ -544,6 +544,25 @@ html {
     height: 100%;
 }
 
+.nosotros-carousel .carousel-inner {
+    position: relative;
+}
+
+.nosotros-carousel .carousel-item {
+    display: block;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 800ms ease-in-out;
+    pointer-events: none;
+}
+
+.nosotros-carousel .carousel-item.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
 .nosotros-main-image img {
     width: 100%;
     height: 100%;

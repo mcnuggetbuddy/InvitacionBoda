@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next';
 
 const R2 = 'https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/';
 const slides = [
-  { src: `${R2}Israel&Paula-69.jpg`, alt: 'Israel y Paula' },
-  { src: `${R2}Isra&Paula-7.jpg`, alt: 'Israel y Paula' },
-  { src: `${R2}Isra&Paula-43.jpg`, alt: 'Israel y Paula' },
-  { src: `${R2}Israel&Paula-46.jpg`, alt: 'Israel y Paula' },
-  { src: `${R2}Isra&Paula-65.jpg`, alt: 'Israel y Paula' },
+  { src: `${R2}Israel&Paula-69.webp`, alt: 'Israel y Paula' },
+  { src: `${R2}Isra&Paula-7.webp`, alt: 'Israel y Paula' },
+  { src: `${R2}Isra&Paula-43.webp`, alt: 'Israel y Paula' },
+  { src: `${R2}Israel&Paula-46.webp`, alt: 'Israel y Paula' },
+  { src: `${R2}Isra&Paula-65.webp`, alt: 'Israel y Paula' },
 ];
 
-const AUTOPLAY_MS = 3500;
+const AUTOPLAY_MS = 3000;
 
 export default function Nosotros() {
   const { t } = useTranslation();
@@ -30,9 +30,10 @@ export default function Nosotros() {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setHasStarted(true);
+        slides.forEach(s => { const img = new Image(); img.src = s.src; });
         observer.disconnect();
       }
-    }, { threshold: 0.3 });
+    }, { rootMargin: '400px 0px', threshold: 0 });
     observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, [hasStarted]);
@@ -80,7 +81,16 @@ export default function Nosotros() {
           <div className="carousel-inner">
             {slides.map((s, i) => (
               <div key={i} className={`carousel-item${i === current ? ' active' : ''}`}>
-                <img src={s.src} alt={s.alt} className="d-block" />
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  className="d-block"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchpriority={i === current ? 'high' : 'low'}
+                  width="1200"
+                  height="800"
+                />
               </div>
             ))}
           </div>
