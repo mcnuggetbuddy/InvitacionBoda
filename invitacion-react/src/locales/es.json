@@ -11,20 +11,20 @@
     "finca": "Finca Vikingos",
     "locacion": "Birrí, Heredia",
     "fecha": "24 de Octubre 2026",
-    "hora": "11:00am",
+    "hora": "11:30am",
     "descripcion": "Les pedimos en la medida de lo posible que realicen carpool con amigos o familiares ya que el espacio de parqueo es limitado"
   },
   "versiculo": {
-    "texto": "Por causa del SEÑOR me alegro mucho y todo mi ser se llena de felicidad. Porque me ha vestido de salvación y me ha puesto una capa de libertad. Quedé como un novio vestido para la boda o como una novia adornada con sus joyas.",
-    "cita": "Isaías 61:10 PDT"
+    "texto": "Dios nuestro, ¡mientras tengamos vida te alabaremos\n\ny te cantaremos himnos!\n\nRecibe con agrado nuestros pensamientos;\n\n¡tú eres nuestra mayor alegría!",
+    "cita": "Salmo 104:33-34 TLA"
   },
   "nosotros": {
     "titulo": "Nosotros",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nil ante, vulpine ate various mass et, pharaoh vulpine ate sem. In hac habilitates platea dictum. Suspendisse flavoring lectures nil, sit amet pulmonary sem porttitor id. Sed a dolor elementum, elementum magna imperdiet, lacinia nib. Phallus incident vestibulum effendi."
+    "descripcion": "La primera vez que conversamos fue en una fiesta de cumpleaños. Nos conocíamos hace un tiempo, pero nunca habíamos hablado. Esa noche tuvimos una conversación muy profunda sobre la fe y abrimos nuestros corazones sobre cómo nos sentíamos en nuestro caminar con Dios. Desde esa noche nuestra amistad creció y tiempo después comenzamos nuestra relación.\n\nNos une nuestro amor por Jesús, la comida, ir a americanear, comprar cosas en outlets y ver películas.\n\nHemos visto la bondad, la fidelidad y el poder de Dios en nuestra relación. Han habido momentos muy buenos y otros bastante difíciles que de la mano de Dios nos han formado y nos han unido.\n\n\nNos llena de gozo y alegría poder compartir el resto de nuestras vidas juntos y queremos invitarlos a ser parte de esta historia."
   },
   "vestimenta": {
     "titulo": "Código de Vestimenta",
-    "descripcion": "Formal. Les pasamos por acá ideas para ese día!",
+    "descripcion": "Formal. Al ser una boda de día al aire libre, sugerimos telas ligeras pero queremos que todos nos veamos elegantes. Denle click a las fotos para ver ideas de outfit.",
     "prohibido": "Por favor, mujeres no usar vestidos de color blanco",
     "mujer": "Mujeres",
     "hombre": "Hombres",
@@ -32,7 +32,7 @@
   },
   "regalos": {
     "titulo": "Regalos",
-    "descripcion": "Lo más importante para nosotros es que nos acompañes en nuestro día. Pero si desean obsequiarnos algo, pueden hacernos un obsequio en efectivo en la estación de muestras de cariño en la recepción. O bien estarán habilitadas las siguientes cuentas",
+    "descripcion": "Lo más importante para nosotros es que nos acompañes en nuestro día. Pero si desean obsequiarnos algo, pueden hacernos un obsequio en efectivo el día de la boda. O bien estarán habilitadas las siguientes cuentas",
     "sinpe": "SINPE:",
     "sinpe_num": "85827555",
     "iban_crc": "Cuenta ₡:",

@@ -11,20 +11,20 @@
     "finca": "Finca Vikingos",
     "locacion": "Birrí, Heredia",
     "fecha": "October 24, 2026",
-    "hora": "11:00am",
+    "hora": "11:30am",
     "descripcion": "We kindly ask that you carpool with friends or family whenever possible, as parking space is limited"
   },
   "versiculo": {
-    "texto": "I will greatly rejoice in the LORD, my whole being shall exult in my God; for he has clothed me with the garments of salvation, he has covered me with the robe of righteousness, as a bridegroom decks himself with a garland, and as a bride adorns herself with her jewels.",
-    "cita": "Isaiah 61:10 NRSV"
+    "texto": "I will sing to the LORD as long as I live.\n\nI will praise my God to my last breath!\n\nMay all my thoughts be pleasing to him,\n\nfor I rejoice in the LORD.",
+    "cita": "Psalm 104:33-34 NLT"
   },
   "nosotros": {
     "titulo": "About Us",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nil ante, vulpine ate various mass et, pharaoh vulpine ate sem. In hac habilitates platea dictum. Suspendisse flavoring lectures nil, sit amet pulmonary sem porttitor id. Sed a dolor elementum, elementum magna imperdiet, lacinia nib. Phallus incident vestibulum effendi."
+    "descripcion": "The first time we really talked was at a birthday party. We had known each other for a while, but we had never actually spoken. That night we had a very deep conversation about faith and opened our hearts about how we felt in our walk with God. From that night on, our friendship grew, and some time later we began our relationship.\n\nWe share our love for Jesus, food, thrifting, and watching movies.\n\nWe have seen God's goodness, faithfulness, and power in our relationship. There have been very sweet moments and some quite difficult ones, and through God's hand they have shaped us and brought us closer together.\n\nIt fills us with joy to be able to share the rest of our lives together, and we would love to invite you to be part of this story."
   },
   "vestimenta": {
     "titulo": "Dress Code",
-    "descripcion": "Formal attire. We've put together some ideas for you!",
+    "descripcion": "Formal. Since this is a daytime outdoor wedding, we suggest light fabrics — but we still want everyone looking their best. Click the photos for outfit ideas.",
     "prohibido": "Please, ladies avoid wearing white dresses",
     "mujer": "Women",
     "hombre": "Men",
@@ -32,7 +32,7 @@
   },
   "regalos": {
     "titulo": "Gifts",
-    "descripcion": "The most important thing for us is that you are with us on our special day. But if you'd like to give a gift, you're welcome to leave a cash contribution at the gift station during the reception. You may also use the following accounts",
+    "descripcion": "The most important thing for us is that you are with us on our special day. But if you'd like to give a gift, you're welcome to bring cash on the wedding day. You may also use the following accounts",
     "sinpe": "SINPE:",
     "sinpe_num": "85827555",
     "iban_crc": "CRC Account:",

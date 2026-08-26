@@ -392,7 +392,7 @@ html {
 
 .versiculo-text p {
     font-family: 'Space Mono', monospace;
-    font-weight: 400;
+    font-weight: 550;
     font-size: 1.05rem;
     letter-spacing: 0;
     line-height: 1.9;
@@ -402,8 +402,8 @@ html {
 
 .versiculo-text cite {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300;
-    font-size: 0.8rem;
+    font-weight: 400;
+    font-size: 0.9rem;
     letter-spacing: 0.1em;
     color: #3a3230;
     font-style: normal;
@@ -477,8 +477,8 @@ html {
 
 .boda-horario p {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 1.0rem;
     letter-spacing: 0.06em;
     color: #3a3230;
     margin: 0;
@@ -517,18 +517,29 @@ html {
 .nosotros-text p {
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     letter-spacing: 0.04em;
     line-height: 1.8;
     color: #3a3230;
     margin: 0;
 }
 
+.nosotros-main-image {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nosotros-main-image .carousel-inner,
+.nosotros-main-image .carousel-item {
+    height: 100%;
+}
+
 .nosotros-main-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
     display: block;
 }
 
@@ -536,13 +547,6 @@ html {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-}
-
-.nosotros-carousel-img {
-    width: 100%;
-    height: clamp(260px, 50vw, 520px);
-    object-fit: cover;
-    object-position: center;
 }
 
 .nosotros-carousel .carousel-control-prev,
@@ -575,10 +579,27 @@ html {
 
 .nosotros-carousel .carousel-indicators {
     z-index: 10;
+    margin: 0 0 12px;
+    gap: 8px;
 }
 
-.nosotros-carousel .carousel-indicators [data-bs-target] {
+.nosotros-carousel .carousel-indicators [data-bs-target],
+.nosotros-carousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+    text-indent: -999px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nosotros-carousel .carousel-indicators button.active {
     background-color: #FFFFFF;
+    transform: scale(1.2);
 }
 
 @media (max-width: 767.98px) {
@@ -624,8 +645,8 @@ html {
 
 .vestimenta-text p {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 400;
+    font-size: 1.0rem;
     letter-spacing: 0.04em;
     line-height: 1.8;
     color: #3a3230;
@@ -652,6 +673,34 @@ html {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 12px;
     padding: 16px 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.outfit-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 12px 28px rgba(58, 50, 48, 0.18);
+}
+
+.outfit-card a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.outfit-card .outfit-img {
+    transition: transform 0.4s ease;
+}
+
+.outfit-card:hover .outfit-img {
+    transform: scale(1.04);
+}
+
+.outfit-card:hover .outfit-click {
+    opacity: 1;
+    color: #c9a09a;
 }
 
 .outfit-title {
@@ -672,8 +721,8 @@ html {
 
 .outfit-click {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300;
-    font-size: 0.75rem;
+    font-weight: 500;
+    font-size: 0.8rem;
     letter-spacing: 0.06em;
     color: #3a3230;
     margin: 0;
@@ -815,7 +864,7 @@ html {
 .rsvp-descripcion {
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     letter-spacing: 0.04em;
     line-height: 1.8;
     color: #3a3230;
@@ -824,15 +873,15 @@ html {
 
 .rsvp-limite {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 1.0rem;
     letter-spacing: 0.04em;
     color: #3a3230;
     margin: 0;
 }
 
 .rsvp-limite span {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .rsvp-btn {

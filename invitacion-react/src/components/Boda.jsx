@@ -12,10 +12,10 @@ export default function Boda() {
         </div>
         <div className="boda-horario">
           <h2>{t('horario.titulo')}</h2>
-          <p>{t('horario.finca')}</p>
-          <p>{t('horario.locacion')}</p>
           <p>{t('horario.fecha')}</p>
           <p>{t('horario.hora')}</p>
+          <p>{t('horario.finca')}</p>
+          <p>{t('horario.locacion')}</p>       
           <div className="waze-row">
             <img src={`${R2}waze.png`} alt="Waze" className="waze-icon" />
             <a href="https://waze.com/ul/hd1u1m2r0n" className="waze-btn" target="_blank" rel="noopener noreferrer">Waze</a>
