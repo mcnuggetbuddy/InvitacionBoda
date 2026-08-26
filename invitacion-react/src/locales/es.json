@@ -61,7 +61,7 @@
       "acompanante_label": "Nombre completo del acompañante {{n}}",
       "acompanante_placeholder": "Ej. Juan Pérez",
       "alergias_label": "¿Alguien tiene alergias o restricciones alimentarias?",
-      "alergias_placeholder": "Escribinos aquí (opcional)",
+      "alergias_placeholder": "Ej. María González (Celiaco)",
       "submit": "Confirmar asistencia",
       "submitting": "Enviando…",
       "success_titulo": "¡Confirmación recibida!",

@@ -61,7 +61,7 @@
       "acompanante_label": "Full name of guest {{n}}",
       "acompanante_placeholder": "e.g. Juan Pérez",
       "alergias_label": "Does anyone have allergies or dietary restrictions?",
-      "alergias_placeholder": "Let us know here (optional)",
+      "alergias_placeholder": "e.g. María González (Celiac)",
       "submit": "Confirm attendance",
       "submitting": "Sending…",
       "success_titulo": "Confirmation received!",
