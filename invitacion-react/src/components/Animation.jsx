@@ -29,7 +29,15 @@ export default function Animation({ animationData, onComplete }) {
   return (
     <section className="animation-section">
       <div ref={containerRef} className="lottie-wrapper played" />
-      <div id="scroll-arrow" className={`scroll-arrow${showArrow ? ' visible' : ''}`}>↓</div>
+      <button
+        type="button"
+        id="scroll-arrow"
+        className={`scroll-arrow${showArrow ? ' visible' : ''}`}
+        aria-label="Scroll to next section"
+        onClick={() => document.getElementById('boda')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        ↓
+      </button>
     </section>
   );
 }

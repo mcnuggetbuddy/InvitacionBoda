@@ -16,6 +16,8 @@ export default function Nosotros() {
   const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const onVisibility = () => setPaused(document.hidden);
@@ -24,10 +26,22 @@ export default function Nosotros() {
   }, []);
 
   useEffect(() => {
-    if (paused) return;
+    if (!sectionRef.current || hasStarted) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setHasStarted(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.3 });
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (paused || !hasStarted) return;
     const timer = setTimeout(() => setCurrent(i => (i + 1) % slides.length), AUTOPLAY_MS);
     return () => clearTimeout(timer);
-  }, [current, paused]);
+  }, [current, paused, hasStarted]);
 
   const touchStartX = useRef(null);
 
@@ -43,7 +57,7 @@ export default function Nosotros() {
   }
 
   return (
-    <section id="nosotros" className="nosotros-section">
+    <section id="nosotros" className="nosotros-section" ref={sectionRef}>
       <div className="nosotros-grid">
         <div className="nosotros-text">
           <h2>{t('nosotros.titulo')}</h2>

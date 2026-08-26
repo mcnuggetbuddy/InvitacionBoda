@@ -359,6 +359,12 @@ html {
     font-size: 2rem;
     color: #f5dbf0;
     animation: bounce 1.2s infinite;
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
 }
 
 .scroll-arrow.visible {
@@ -811,7 +817,7 @@ html {
 
 @media (max-width: 767.98px) {
     .regalos-section {
-        padding: 48px 20px;
+        padding: 96px 20px;
     }
 
     .regalos-grid {
