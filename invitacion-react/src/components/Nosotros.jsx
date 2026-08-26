@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 const R2 = 'https://pub-848e497284a14e3babf4a1c6d1838bf0.r2.dev/';
 const slides = [
   { src: `${R2}Israel&Paula-69.jpg`, alt: 'Israel y Paula' },
-  { src: `${R2}Israel&Paula-46.jpg`, alt: 'Israel y Paula' },
   { src: `${R2}Isra&Paula-7.jpg`, alt: 'Israel y Paula' },
   { src: `${R2}Isra&Paula-43.jpg`, alt: 'Israel y Paula' },
+  { src: `${R2}Israel&Paula-46.jpg`, alt: 'Israel y Paula' },
   { src: `${R2}Isra&Paula-65.jpg`, alt: 'Israel y Paula' },
 ];
 
