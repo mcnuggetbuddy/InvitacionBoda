@@ -8,7 +8,7 @@ export default function Regalos() {
     <section id="regalos" className="regalos-section">
       <div className="regalos-grid">
         <div className="regalos-image">
-          <img src={`${R2}Israel&Paula-114.jpg`} alt="Israel y Paula" />
+          <img src={`${R2}Isra&Paula-4.jpg`} alt="Israel y Paula" />
         </div>
         <div className="regalos-text">
           <h2>{t('regalos.titulo')}</h2>
