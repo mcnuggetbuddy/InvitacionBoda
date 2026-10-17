@@ -1,6 +1,10 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/mesas", "destination": "/index.html" },
+    { "source": "/seating", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
