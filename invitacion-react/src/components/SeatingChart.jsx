@@ -49,8 +49,8 @@ const TABLES = [
   {
     id: 7,
     shape: 'rect',
-    top: ['Maricruz Rodríguez', 'Andres Coto', 'Tatiana Moreira', 'Daniel Rodríguez'],
-    bottom: ['Evan Hefflin', 'Rebekah Hamilton', 'Alex Wu Hou', 'Channah van der Lee-de Feijter'],
+    top: ['Sean Lea', 'Gabriel Kappelgaard', 'Tatiana Moreira', 'Daniel Rodríguez'],
+    bottom: ['Evan Hefflin', 'Rebekah Hamilton', 'Channah van der Lee-de Feijter', 'Alex Wu Hou'],
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const TABLES = [
   {
     id: 10,
     shape: 'rect',
-    top: ['Gabriel Kappelgaard', 'Sean Lea', 'Cecilia Guevara', 'Saúl Rodríguez', 'Carlos Castro', 'Sofía Ramírez'],
+    top: ['Maricruz Rodríguez', 'Andres Coto', 'Cecilia Guevara', 'Saúl Rodríguez', 'Carlos Castro', 'Sofía Ramírez'],
     bottom: ['Vincent Worsfold', 'Paula De La O','Abigail Funk', 'Erlin Obando', 'Sebastián Constanza', 'Susy Umaña'],
   },
 ];
