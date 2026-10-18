@@ -44,7 +44,7 @@ const TABLES = [
     id: 6,
     shape: 'rect',
     top: ['Ighor Cardozo', 'Hazel Villalobos',  'Melissa Mena', 'Priscilla'],
-    bottom: ['Diego Rodriguez', 'Rosario Arias', 'Tania', 'Catalina González'],
+    bottom: ['Diego Rodriguez', 'Rosario Arias', 'Tania Carballo', 'Catalina González', 'Karina Fernandez'],
   },
   {
     id: 7,
